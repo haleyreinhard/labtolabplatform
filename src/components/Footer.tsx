@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import { TestTube2, Twitter, Linkedin, Facebook } from 'lucide-react';
 
