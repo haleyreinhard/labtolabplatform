@@ -6,12 +6,8 @@ export default defineConfig({
   plugins: [react()],
   resolve: {
     alias: {
-      '@': path.resolve(__dirname, './src'),
-    },
-  },
-  server: {
-    port: 5173,
-    host: true
+      '@': path.resolve(__dirname, './src')
+    }
   },
   build: {
     outDir: 'dist',
@@ -20,8 +16,14 @@ export default defineConfig({
       output: {
         manualChunks: {
           vendor: ['react', 'react-dom', 'react-router-dom'],
-        },
-      },
-    },
+          ui: ['@supabase/auth-ui-react', '@supabase/auth-ui-shared'],
+          charts: ['recharts']
+        }
+      }
+    }
   },
+  server: {
+    port: 3000,
+    host: true
+  }
 });
