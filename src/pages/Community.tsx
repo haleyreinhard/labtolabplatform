@@ -1,4 +1,3 @@
-import React from 'react';
 import { MessageSquare, Users, Newspaper } from 'lucide-react';
 
 function Community() {
