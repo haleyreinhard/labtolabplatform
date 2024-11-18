@@ -9,16 +9,9 @@
   from = "/*"
   to = "/index.html"
   status = 200
+  force = true
 
 [[headers]]
-  for = "/*"
+  for = "/assets/*"
   [headers.values]
-    Strict-Transport-Security = "max-age=31536000"
-    X-Content-Type-Options = "nosniff"
-    X-Frame-Options = "DENY"
-    X-XSS-Protection = "1; mode=block"
-
-[dev]
-  command = "npm run dev"
-  port = 5173
-  publish = "dist"
+    Cache-Control = "public, max-age=31536000, immutable"
